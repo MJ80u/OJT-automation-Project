@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, iniatial-scale=1.0">
+        <title>Quarterly Report System</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div id="login-screen">
+
+            <h1>Laoag City Hall</h1>
+            <h2>Quarterly Report System</h2>
+
+            <div id="login-box">
+
+                <label>Select Office:</label>
+                <select id="office-select">
+                    <option value="">-- Select your office --</option>
+                    <option value="CMO">Office the City Mayor</option>
+                    <option value="OCVM">Office of the Vice-Mayor</option>
+                    <option value="OSS">Office of hte Secretary to the Sanggunian</option>
+                    <option value="CAdmin">Office ot the City Administrator</option>
+                    <option value="OCHRMO">City Human Resources Management Officer</option>
+                </select>
+
+                <label>Role:</label>
+                <select id="role-select">
+                    <option value="employee">Employee</option>
+                    <option value="manager">Manager</option>
+                </select>
+
+                <label>Password:</label>
+                <input type="password" id="password-input" placeholder="Enter password" />
+
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <div id="employee-view" style="display: none;">
+            <h2>Employee Report Form</h2>
+            <p>Welcome, employee!</p>
+            <select id="quarter-select">
+                <option value="Q1">Q1 (January - March)</option>
+                <option value="Q2">Q2 (April - June)</option>
+                <option value="Q3">Q3 (July - September)</option>
+                <option value="Q4">Q4 (October - December)</option>
+            </select>
+
+            <div id="report-container"></div>
+
+            <button onclick="loadReport()">Load Report</button>
+
+        </div>
+
+        <div id="manager-view" style="display: none;">
+            <h2>Manager Dashboard</h2>
+            <p>Welcome, manager!</p>
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
