@@ -23,6 +23,30 @@
                     <option value="OSS">Office of hte Secretary to the Sanggunian</option>
                     <option value="CAdmin">Office ot the City Administrator</option>
                     <option value="OCHRMO">City Human Resources Management Officer</option>
+                    <option value="CPDO">City Planning and Development Coordinator</option>
+                    <option value="OCBO">City Budget Officer</option>
+                    <option value="OCT">City Treasurer</option>
+                    <option value="OAcct">City Accountant</option>
+                    <option value="OCCR">City Civil Registrar</option>
+                    <option value="OCGSO">General Services Officer</option>
+                    <option value="OCAss">City Assessor</option>
+                    <option value="OCICTO">City Information and Communications Technology Officer</option>
+                    <option value="OCMAO">City Mayor's Agri Office</option>
+                    <option value="OCLO">City Legal Officer</option>
+                    <option value="OCCAO">City Cooperative Affairs Officer</option>
+                    <option value="OCHO">City Health Officer</option>
+                    <option value="PopCom">Population Commission</option>
+                    <option value="OCSWDO">City Social Welfare and Development Officer</option>
+                    <option value="OCDRRMO">City Disaster Risk Reduction Management Officer</option>
+                    <option value="PDAO">Persons with Disability Affairs Office</option>
+                    <option value="OCAg">City Agriculturist</option>
+                    <option value="OCTO">City Tourism Officer</option>
+                    <option value="OCVET">City Veterinarian</option>
+                    <option value="OCENRO">City Environment and Natural Resources Officer</option>
+                    <option value="OCE">Office of the City Engineer</option>
+                    <option value="LCGH">Laoag City General Hospital</option>
+                    <option value="LCPMCC">Laoag City People's Mall Convention Center</option>
+                    <option value="LCSH">Laoag City Sports Hub</option>
                 </select>
 
                 <label>Role:</label>
@@ -52,11 +76,30 @@
 
             <button onclick="loadReport()">Load Report</button>
 
+            <button onclick="logout()">Logout</button>
+
         </div>
 
         <div id="manager-view" style="display: none;">
             <h2>Manager Dashboard</h2>
-            <p>Welcome, manager!</p>
+            <p>Quarterly Submission Status - All Offices</p>
+            <select id="manager-quarter-select" onchange="loadManagerDashboard()">
+                <option value="Q1-2026">Q1 2026</option>
+                <option value="Q2-2026">Q2 2026</option>
+                <option value="Q3-2026">Q3 2026</option>
+                <option value="Q4-2026">Q4 2026</option>
+            </select>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Office</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="submission-table-body">
+
+                </tbody>
+            </table>
         </div>
 
         <script src="script.js"></script>
